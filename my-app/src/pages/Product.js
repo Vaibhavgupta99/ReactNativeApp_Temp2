@@ -170,6 +170,7 @@ const styles = StyleSheet.create({
     paddingHorizontal:100,
     paddingVertical:10,
     borderRadius:50,
+    elevation:3,
   },
 
 })

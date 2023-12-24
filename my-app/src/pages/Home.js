@@ -75,11 +75,15 @@ export default function Home({navigation}) {
       </View>
       <View style={styles.box3}>
         <View style={styles.categroy1}>
-          <View style={styles.cc}></View>
+          <View style={styles.cc}>
+            <Image style={styles.img_dryfruit} source={require('../img/Dry_fruits.png')} />
+          </View>
           <Text style={styles.txt_cc}>Dry Fruits</Text>
         </View>
         <View style={styles.categroy2}>
-        <View style={styles.cc}></View>
+        <View style={styles.cc}>
+          <Image style={styles.img_dryfruit} source={require('../img/Hazelnut-removebg-preview.png')} />
+        </View>
           <Text style={styles.txt_cc}>Nuts</Text>
         </View>
         <View style={styles.search}>
@@ -154,6 +158,11 @@ const styles = StyleSheet.create({
   box3:{
     height:wh/8,
     flexDirection:'row',
+  },
+  img_dryfruit:{
+    height:50,
+    width:50,
+    resizeMode:'contain',
   },
   categroy1:{
     flex:.3,
@@ -232,6 +241,7 @@ const styles = StyleSheet.create({
     paddingVertical:10,
     justifyContent:'center',
     marginTop:10,
+    elevation:3,
   },
   cart_icon:{
     marginRight:10,
