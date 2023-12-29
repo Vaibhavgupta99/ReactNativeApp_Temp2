@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     height:wh/16,
     width:wh/16,
     borderRadius:wh/16,
-    backgroundColor:'#ffcb80'
+    backgroundColor:'#ffcb80',
   },
   txt_cc:{
     fontWeight:'bold',
