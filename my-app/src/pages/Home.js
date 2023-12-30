@@ -1,7 +1,39 @@
 import { View, Text, StyleSheet, Dimensions, Image, ScrollView, TouchableOpacity, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import { FontAwesome, Feather, FontAwesome5, Ionicons,  } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Cart from './Cart';
+
+const StoreData = async (data) => {
+  try {
+    await AsyncStorage.setItem('product',JSON.stringify(data));
+    alert('Data Stored Successfully')
+  } catch (e) {
+    console.log(e)
+  }
+};
+
+
+ const GetData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('product');
+    /* console.log(value) */
+    
+    if (value != null) {
+      // We have data!!
+      // console.log(value);
+      const obj = JSON.parse(value)
+      /* alert(obj.name + ',' + obj.phone) */
+      alert("Hello World");
+    }
+    else{
+      console.log('No data is stored')
+    }
+  } catch (e) {
+    // Error retrieving data
+  }
+};
+
 
 
 const wh = Dimensions.get('window').height
@@ -99,9 +131,9 @@ export default function Home({navigation}) {
             <Text style={styles.name}>{products[data].name}</Text>
             <Text style={styles.price}>{products[data].price} <Text style={styles.weight}>/ 300g</Text></Text>
             <Text style={styles.rating}>{products[data]["rating"]}</Text>
-            <TouchableOpacity onPress={()=> {navigation.navigate(Cart)}} style={styles.cart}>
+            <TouchableOpacity onPress={()=> {navigation.navigate(Cart); StoreData(data)}} style={styles.cart}>
               <FontAwesome5 style={styles.cart_icon} name="cart-arrow-down" size={24} color="black" />
-              <Text>Add to cart</Text>
+              <Text>Add to cart </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.heart}>
