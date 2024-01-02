@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "800581351426",
+    "project_id": "vaibhav-project-a6039",
+    "storage_bucket": "vaibhav-project-a6039.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800581351426:android:9dc5dda9f120b2b70dcf1b",
+        "android_client_info": {
+          "package_name": "com.anonymous.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUtbP-DiyUj_IfhyhFxvc_t9MnuR65rzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
